@@ -1,0 +1,5 @@
+<p>offers works!</p>
+
+<p *ngFor="let card of cards$ | async">
+    {{card.id}} {{card.amount}} {{card.name}}
+</p>

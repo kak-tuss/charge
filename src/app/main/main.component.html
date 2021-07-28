@@ -1,0 +1,35 @@
+<button (click)="handleSubmit()">Click me</button>
+
+<p>
+  Your exercise for today:
+</p>
+<ul>
+  <li>Assume you have a form that collects: user's name, item name, item price (for now use hard coded values)</li>
+  <li>
+    <div>Create a sumit button that will send a POST request to:</div>
+    <div><a>https://60bd1033b8ab3700175a0188.mockapi.io/api/v1/payments</a></div>
+    <div>with body: {{ payment | json }}</div>
+  </li>
+  <li>
+    After submitting the form, navigate the user to a new route called 'offers' which will display the financing offers
+    for the user
+  </li>
+  <li>
+    <div>Fetch data from:</div>
+    <div><a>https://60bd1033b8ab3700175a0188.mockapi.io/api/v1/offers</a></div>
+    <div>and recieve an array of objects of type: {{offer | json}} </div>
+  </li>
+  <li>
+    <div>Fetch data from:</div>
+    <div><a>https://60bd1033b8ab3700175a0188.mockapi.io/api/v1/plans</a></div>
+    <div>and recieve an array of objects of type: {{plan | json}} </div>
+  </li>
+  <li>
+    Display the offer plans to the user a list of cards (in each card display the name of the plan and the amount)
+  </li>
+  <li>Filter and show only the offers with amount that is bigger than the item price.</li>
+  <li>
+    Clicking on an offer will show the following text at the top of the page: 'Congragulations ((user name)) you
+    recieved ((amount))$ to buy the ((item name)) you wanted!'
+  </li>
+</ul>
